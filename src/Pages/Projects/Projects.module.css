@@ -1,0 +1,221 @@
+.projects {
+  padding: 110px 0;
+  background-color: var(--bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.header h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.header p {
+  margin-top: 14px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    rgba(79, 70, 229, 0.06),
+    transparent
+  );
+  padding: 28px;
+  transition: all 0.35s ease;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  border-color: var(--primary);
+  box-shadow: 0 30px 60px rgba(79, 70, 229, 0.18);
+}
+
+/* Content */
+.cardContent h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cardContent p {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Tech Stack */
+.techStack {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techStack span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Actions */
+.actions {
+  margin-top: 26px;
+  display: flex;
+  gap: 16px;
+}
+
+.actions a {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.actions a:first-child {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.actions a:first-child:hover {
+  background-color: var(--primary-hover);
+}
+
+.actions a:last-child {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.actions a:last-child:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 30px;
+  }
+}
+
+/* existing styles remain SAME */
+
+/* Buttons */
+.primaryBtn {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primaryBtn:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondaryBtn {
+  border: 1px solid var(--border);
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ===== MODAL STYLES ===== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  width: 90%;
+  max-width: 800px;
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+  animation: scaleUp 0.35s ease;
+}
+
+.video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Close Button */
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
+}

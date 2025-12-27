@@ -1,0 +1,115 @@
+.skills {
+  padding: 100px 0;
+  background-color: var(--bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.header p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* Sections */
+.section {
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+/* Professional Skills */
+.professionalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.professionalCard {
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.professionalCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Technical Skills */
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.techCard {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+  animation: fadeUp 1s ease forwards;
+}
+
+.techCard:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 30px;
+  }
+
+  .sectionTitle {
+    text-align: center;
+  }
+}
