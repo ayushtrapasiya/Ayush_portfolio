@@ -5,6 +5,8 @@
   background-color: var(--bg);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
+  
+  
 }
 
 .navbar {
@@ -14,6 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
+  
 }
 
 /* Logo */
@@ -33,6 +37,7 @@
   display: flex;
   gap: 32px;
   list-style: none;
+  
 }
 
 .menu li a {
@@ -76,16 +81,18 @@
   margin-bottom: 5px;
   border-radius: 4px;
   transition: all 0.3s ease;
+  
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    
   }
 
   .menu {
-    position: absolute;
+    position: fixed;;
     top: 64px;
     left: 0;
     width: 100%;
@@ -97,10 +104,12 @@
     gap: 40px;
     transform: translateX(100%);
     transition: transform 0.4s ease;
+    
   }
 
   .menu.active {
     transform: translateX(0);
+    /* z-index: 111111111111111; */
   }
 }
 
