@@ -11,7 +11,7 @@ export default function Home() {
           <p className={styles.greeting}>Hi, I’m</p>
 
           <h1 className={styles.title}>
-            Ayush Patel <br />
+            Ayush Trapasiya <br />
             <span>React JS Developer</span>
           </h1>
 
