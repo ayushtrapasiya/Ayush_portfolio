@@ -5,8 +5,9 @@ import About from "../Pages/About/About";
 import Skills from "../Pages/Skills/Skills";
 import Projects from "../Pages/Projects/Projects";
 import Contact from "../Pages/Contact/Contact";
+import { createHashRouter } from "react-router";
 
-const Router = createBrowserRouter([
+const Router = createHashRouter([
   {
     pat: "/",
     element: <App />,
